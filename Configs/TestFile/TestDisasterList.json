@@ -1,0 +1,44 @@
+{
+  "data": [
+      {
+          "unit_code": "HA_S",
+          "little_unit": [
+              {
+                  "little_unit_code": "HA_S_00",
+                  "ScoreListData": {
+                      "NewestData": [
+                          "OD_S_01",
+                          "OD_S_02",
+                          "OD_S_05"
+                      ],
+                      "HighestData": [
+                          "OD_S_01",
+                          "OD_S_02",
+                          "OD_S_05"
+                      ]
+                  }
+              },
+              {
+                  "little_unit_code": "HA_S_01",
+                  "ScoreListData": {
+                      "NewestData": [
+                          "OD_S_03",
+                          "OD_S_04"
+                      ],
+                      "HighestData": [
+                          "OD_S_03",
+                          "OD_S_04"
+                      ]
+                  }
+              },
+              {
+                  "little_unit_code": "HA_S_02",
+                  "ScoreListData": {
+                      "NewestData": null,
+                      "HighestData": null
+                  }
+              }
+          ]
+      }
+  ]
+}

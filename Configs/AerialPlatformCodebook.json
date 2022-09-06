@@ -1,0 +1,244 @@
+{
+  "HLARootObject": {
+    "Attribute": {
+      "HLAprivilegeToDeleteObject": {
+        "DataType": "NA",
+        "PubSub": "N"
+      }
+    },
+    "PubSub": "N",
+    "SubClass": {
+      "CkptSet": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Course": {
+        "Attribute": {
+          "Status": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "end(0), on_going(2)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Disaster": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "DisasterList": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Score": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "ScoreList": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "TraineeInfo": {
+        "Attribute": {
+          "Language": {
+            "PubSub": "PS",
+            "DataType": "string",
+            "_comment": "Ch:Chinese,  En:English"
+          },
+          "TraineeID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Name": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "CourseID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "TypeID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "TraineePosition": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "uint"
+          },
+          "X": {
+            "PubSub": "PS",
+            "DataType": "float"
+          },
+          "Y": {
+            "PubSub": "PS",
+            "DataType": "float"
+          },
+          "Z": {
+            "PubSub": "PS",
+            "DataType": "float"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "UnitCkpt": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Vibrator": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Ability": {
+            "PubSub": "PS",
+            "DataType": "int"
+          },
+          "Trigger": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "on/off: 1(ON); 0(OFF)"
+          },
+          "Strength": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "weak(1)/medium(2)/strong(3)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Fan": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Trigger": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "on/off: 1(ON); 0(OFF)"
+          },
+          "Strength": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "weak(1)/medium(2)/strong(3)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "CarHandleInfo": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Forward": {
+            "PubSub": "PS",
+            "DataType": "int"
+          },
+          "Backward": {
+            "PubSub": "PS",
+            "DataType": "int"
+          },
+          "Right": {
+            "PubSub": "PS",
+            "DataType": "int"
+          },
+          "Left": {
+            "PubSub": "PS",
+            "DataType": "int"
+          },
+          "Up": {
+            "PubSub": "PS",
+            "DataType": "int"
+          },
+          "Down": {
+            "PubSub": "PS",
+            "DataType": "int"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      }
+    }
+  },
+  "HLARootInteraction": {
+    "SubClass": {
+      "CourseCtrl": {
+        "Parameter": {
+          "Status": {
+            "DataType": "int",
+            "_comment": "terminated(0),paused(1),start(2)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "CarHandleCtrl": {
+        "Parameter": {
+          "ID": {
+            "DataType": "string"
+          },
+          "OP": {
+            "DataType": "int",
+            "_comment": "movement type forward(1), backward(2), right(3), left(4), up(5), down(6)"
+          },
+          "Offset": {
+            "DataType": "int",
+            "_comment": "value(int)  following rules applied to the offset value - 1. up/down operation will not affect the offset value 2. the offset value is set to zero by default 3. right operation increase the offset value by one; left operation decrease the offset value by one 4. when the offset value larger than zero, the forward operation will make the car move clockwise; the backward operation will make the car move counterclockwise 5. when the offset value less than zero, the forward operation will make the car move counterclockwise; the backward operation will make the car move clockwise 6. the car will move straight forward/backward only when the offset value is zero"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      }
+    },
+    "Parameter": {},
+    "PubSub": "N"
+  }
+}

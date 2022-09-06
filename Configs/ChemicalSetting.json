@@ -1,0 +1,171 @@
+{
+  "TrainingArgument": {
+    "_comment": "The training argument of this course.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "矽甲烷-氣瓶櫃巡檢", "矽甲烷-鋼瓶更換" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID",
+        "TargetOptions": [ "GC_U_00", "GC_U_01" ]
+      },
+      {
+        "Name": "Mode",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "體驗版", "測驗版", "教育版" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "TypeID",
+        "TargetOptions": [ "Experience", "Examination", "Education" ]
+      }
+    ]
+  },
+  "HardwareInfo": {
+    "_comment": "The hardware information that is going to display during the cource.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "Label",
+        "Text": "目前的課程為:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID"
+      },
+      {
+        "Name": "Trainee1",
+        "ControlType": "Label",
+        "Text": "第一個受訓員ID:{0}",
+        "Destination": "XR",
+        "TargetType": "Object",
+        "TargetClass": "UserData",
+        "TargetArgument": "ID",
+        "Index": 0
+      },
+      {
+        "Name": "Trainee2",
+        "ControlType": "Label",
+        "Text": "第二個受訓員ID:{0}",
+        "Destination": "XR",
+        "TargetType": "Object",
+        "TargetClass": "UserData",
+        "TargetArgument": "ID",
+        "Index": 1
+      },
+      {
+        "Name": "SIH4Valve",
+        "ControlType": "Label",
+        "Text": "SIH4Valve:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "SIH4Valve",
+        "TargetArgument": "Trigger"
+      },
+      {
+        "Name": "IP1",
+        "ControlType": "Label",
+        "Text": "IP1:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "IP",
+        "TargetArgument": "Status",
+        "Index": 0
+      },
+      {
+        "Name": "IP2",
+        "ControlType": "Label",
+        "Text": "IP2:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "IP",
+        "TargetArgument": "Status",
+        "Index": 1
+      },
+      {
+        "Name": "Score主",
+        "ControlType": "Label",
+        "Text": "Score主:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Score",
+        "TargetArgument": "Data",
+        "Index": 0
+      },
+      {
+        "Name": "Score副",
+        "ControlType": "Label",
+        "Text": "Score副:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Score",
+        "TargetArgument": "Data",
+        "Index": 1
+      }
+    ]
+
+  },
+  "Manipulation": {
+    "_comment": "The manipulable devices during the course.",
+    "Configs": [
+      {
+        "Name": "SIH4ValveOn",
+        "ControlType": "Button",
+        "Text": "開啟矽甲烷閥",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "SIH4Valve",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "1" ]
+      },
+      {
+        "Name": "SIH4ValveOff",
+        "ControlType": "Button",
+        "Text": "關閉矽甲烷閥",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "SIH4Valve",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "0" ]
+      }
+    ]
+  },
+  "ConnectingDevice": {
+    "_comment": "The devices that is going to connect to this program.(used for connection check)",
+    "Configs": [
+      {
+        "Name": "Course",
+        "TargetClass": "Course",
+        "Text": "AR Content"
+      },
+      {
+        "Name": "SIH4Valve",
+        "TargetClass": "SIH4Valve",
+        "Text": "矽甲烷閥"
+      },
+      {
+        "Name": "Posture",
+        "TargetClass": "Posture",
+        "Text": "Posture1",
+        "Index": 0
+      },
+      {
+        "Name": "Posture",
+        "TargetClass": "Posture",
+        "Text": "Posture2",
+        "Index": 1
+      }
+
+    ]
+
+  },
+  "CameraUri": [
+    "rtsp://wjcam6:2455taff1756@192.168.2.156:88/videoMain",
+    "rtsp://wjcam5:2455taff1756@192.168.2.155:88/videoMain",
+    "rtsp://wjcam7:2455taff1756@192.168.2.157:88/videoMain",
+    "rtsp://wjcam1:2455taff1756@192.168.2.154:88/videoMain"
+  ]
+}

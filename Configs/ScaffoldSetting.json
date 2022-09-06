@@ -1,0 +1,133 @@
+{
+  "TrainingArgument": {
+    "_comment": "The training argument of this course.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "施工架作業-安全裝備穿戴", "施工架作業-磁磚拼貼及牆壁粉刷", "施工架作業-磚牆拆除作業", "施工架作業-壁連座阻力與拆除" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID",
+        "TargetOptions": [ "SF_U_00", "SF_U_01", "SF_U_02", "SF_U_03" ]
+      },
+      {
+        "Name": "Mode",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "體驗版", "測驗版", "教育版" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "TypeID",
+        "TargetOptions": [ "Experience", "Examination", "Education" ]
+      }
+    ]
+  },
+  "HardwareInfo": {
+    "_comment": "The hardware information that is going to display during the cource.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "Label",
+        "Text": "目前的課程為:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID"
+      },
+      {
+        "Name": "Trainee1",
+        "ControlType": "Label",
+        "Text": "受訓員ID:{0}",
+        "Destination": "XR",
+        "TargetType": "Object",
+        "TargetClass": "UserData",
+        "TargetArgument": "ID",
+        "Index": 0
+      },
+      {
+        "Name": "Vibrator",
+        "ControlType": "Label",
+        "Text": "震動地板:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Vibrator",
+        "TargetArgument": "Trigger"
+      },
+      {
+        "Name": "Fan",
+        "ControlType": "Label",
+        "Text": "電風扇:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Fan",
+        "TargetArgument": "Trigger"
+      }
+
+
+    ]
+
+  },
+  "Manipulation": {
+    "_comment": "The manipulable devices during the course.",
+    "Configs": [
+      {
+        "Name": "VibratorOn",
+        "ControlType": "Button",
+        "Text": "開啟震動",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Vibrator",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "1" ]
+      },
+      {
+        "Name": "VibratorOff",
+        "ControlType": "Button",
+        "Text": "關閉震動",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Vibrator",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "0" ]
+      }
+    ]
+  },
+  "ConnectingDevice": {
+    "_comment": "The devices that is going to connect to this program.(used for connection check)",
+    "Configs": [
+      {
+        "Name": "Course",
+        "TargetClass": "Course",
+        "Text": "AR Content"
+      },
+      {
+        "Name": "Vibrator",
+        "TargetClass": "Vibrator",
+        "Text": "震動地板"
+      }
+
+    ]
+
+  },
+  "CameraUri": [
+    "rtsp://:8554/test",
+    "rtsp://:8554/test",
+    "rtsp://:8554/test",
+    "rtsp://:8554/test"
+  ],
+  "Listener": [
+    {
+      "ActionName": "PlayMusic",
+      "Destination": "Federate",
+      "TargetClass": "Vibrator",
+      "TargetArgument": "Trigger",
+      "Index": 0,
+      "Arguments": {
+        "URL": "C:\\Users\\B00047\\Desktop\\TestTest.mp3"
+      }
+    }
+  ]
+
+}

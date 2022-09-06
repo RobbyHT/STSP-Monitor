@@ -1,0 +1,10 @@
+{
+  "id": "11010050015",
+  "unit_code": "SW_U",
+  "little_unit": [
+      {
+          "code": "SW_U_00",
+          "OccDisaster": ["OD_S_01", "OD_S_02", "OD_S_05"]
+      }
+  ]
+}

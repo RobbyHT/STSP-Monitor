@@ -1,0 +1,95 @@
+{
+    "id": "11010050015",
+    "unit_code": "SW_U",
+    "little_unit": [
+      {
+        "code": "SW_U_00",
+        "CheckPoint": [
+          {
+            "CKPT_id": "CKPT_00",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_01",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_02",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_03",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_04",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_05",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_06",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_07",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_08",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_09",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_10",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_11",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_12",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_13",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_14",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_15",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_16",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_17",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_18",
+            "PointType": 0
+          },
+          {
+            "CKPT_id": "CKPT_19",
+            "PointType": 1
+          },
+          {
+            "CKPT_id": "CKPT_20",
+            "PointType": 0
+          }
+        ]
+      }
+    ]
+  }

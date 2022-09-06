@@ -1,0 +1,80 @@
+{
+  "data": [
+      {
+          "unit_code": "HA_S",
+          "little_unit": [
+              {
+                  "little_unit_code": "HA_S_00",
+                  "ScoreListData": {
+                      "NewestData": {
+                          "score": 90,
+                          "pass": true,
+                          "StartDateTime": "2021-08-24 10:00:00",
+                          "EndDateTime": "2021-08-24 12:20:00",
+                          "TestTimeLast": "02:00:00"
+                      },
+                      "HighestData": {
+                          "score": 90,
+                          "pass": true,
+                          "StartDateTime": "2021-08-24 10:00:00",
+                          "EndDateTime": "2021-08-24 12:20:00",
+                          "TestTimeLast": "02:00:00"
+                      }
+                  }
+              },
+              {
+                  "little_unit_code": "HA_S_01",
+                  "ScoreListData": {
+                      "NewestData": {
+                          "score": 40,
+                          "pass": false,
+                          "StartDateTime": "2021-08-24 13:00:00",
+                          "EndDateTime": "2021-08-24 14:30:00",
+                          "TestTimeLast": "01:30:00"
+                      },
+                      "HighestData": {
+                          "score": 50,
+                          "pass": false,
+                          "StartDateTime": "2021-08-23 16:00:00",
+                          "EndDateTime": "2021-08-23 17:30:00",
+                          "TestTimeLast": "01:30:00"
+                      }
+                  }
+              },
+              {
+                  "little_unit_code": "HA_S_02",
+                  "ScoreListData": {
+                      "NewestData": null,
+                      "HighestData": null
+                  }
+              }
+          ]
+      },
+      {
+          "unit_code": "HA_C",
+          "little_unit": [
+              {
+                  "little_unit_code": "HA_C_00",
+                  "ScoreListData": {
+                      "NewestData": null,
+                      "HighestData": null
+                  }
+              },
+              {
+                  "little_unit_code": "HA_C_01",
+                  "ScoreListData": {
+                      "NewestData": null,
+                      "HighestData": null
+                  }
+              },
+              {
+                  "little_unit_code": "HA_C_02",
+                  "ScoreListData": {
+                      "NewestData": null,
+                      "HighestData": null
+                  }
+              }
+          ]
+      }
+  ]
+}

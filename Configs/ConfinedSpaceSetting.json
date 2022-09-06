@@ -1,0 +1,234 @@
+{
+  "TrainingArgument": {
+    "_comment": "The training argument of this course.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "下水道-地面安全作業", "下水道-下水道中清淤作業" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID",
+        "TargetOptions": [ "SW_U_00", "SW_U_01" ]
+      },
+      {
+        "Name": "Mode",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "體驗版", "測驗版", "教育版" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "TypeID",
+        "TargetOptions": [ "Experience", "Examination", "Education" ]
+      }
+    ]
+  },
+  "HardwareInfo": {
+    "_comment": "The hardware information that is going to display during the cource.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "Label",
+        "Text": "目前的課程為:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID"
+      },
+      {
+        "Name": "Trainee1",
+        "ControlType": "Label",
+        "Text": "受訓員ID:{0}",
+        "Destination": "XR",
+        "TargetType": "Object",
+        "TargetClass": "UserData",
+        "TargetArgument": "ID",
+        "Index": 0
+      },
+      {
+        "Name": "PostureAction1",
+        "ControlType": "Label",
+        "Text": "PostureAction1:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Posture",
+        "TargetArgument": "Action",
+        "Index": 0
+      },
+      {
+        "Name": "GasDetector",
+        "ControlType": "Label",
+        "Text": "氣體類型:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "GasDetector",
+        "TargetArgument": "Gas",
+        "Index": 0
+      },
+      {
+        "Name": "GasDetector",
+        "ControlType": "Label",
+        "Text": "氣體濃度:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "GasDetector",
+        "TargetArgument": "Concentration",
+        "Index": 0
+      },
+      {
+        "Name": "PoisonValve",
+        "ControlType": "Label",
+        "Text": "PoisonValve:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "PoisonValve",
+        "TargetArgument": "Trigger"
+      },
+      {
+        "Name": "Item",
+        "ControlType": "Label",
+        "Text": "Item:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Item",
+        "TargetArgument": "Data"
+      },
+      {
+        "Name": "Score_unit1",
+        "ControlType": "Label",
+        "Text": "Score_unit1:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Score",
+        "TargetArgument": "Data",
+        "Index": 0
+      },
+      {
+        "Name": "Score_unit2",
+        "ControlType": "Label",
+        "Text": "Score_unit2:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Score",
+        "TargetArgument": "Data",
+        "Index": 1
+      }
+    ]
+
+  },
+  "Manipulation": {
+    "_comment": "The manipulable devices during the course.",
+    "Configs": [
+      {
+        "Name": "FanOn",
+        "ControlType": "Button",
+        "Text": "開啟抽風機",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Fan",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "1" ]
+      },
+      {
+        "Name": "FanOff",
+        "ControlType": "Button",
+        "Text": "關閉抽風機",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Fan",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "0" ]
+      },
+      {
+        "Name": "PoisonOn",
+        "ControlType": "Button",
+        "Text": "開啟臭氣瓶",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "PoisonValve",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "1" ]
+      },
+      {
+        "Name": "PoisonOff",
+        "ControlType": "Button",
+        "Text": "關閉臭氣瓶",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "PoisonValve",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "0" ]
+      },
+      {
+        "Name": "GasDetector",
+        "ControlType": "Complex",
+        "Text": "發送氣體偵測訊號",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "GasDetector",
+        "ComplexItems": [
+          {
+            "ControlType": "Label",
+            "Text": "氣體類型"
+          },
+          {
+            "ControlType": "ComboBox",
+            "OptionTexts": [ "O2", "H2S", "CO", "LEL" ],
+            "TargetArgument": "Gas",
+            "TargetValues": [ "0", "1", "2", "3" ]
+          },
+          {
+            "ControlType": "Label",
+            "Text": "氣體濃度(單位ppm)"
+          },
+          {
+            "ControlType": "TextBox",
+            "TargetArgument": "Concentration"
+          },
+          {
+            "ControlType": "Button",
+            "Text": "發送氣體訊號"
+          }
+        ]
+      }
+    ]
+  },
+  "ConnectingDevice": {
+    "_comment": "The devices that is going to connect to this program.(used for connection check)",
+    "Configs": [
+      {
+        "Name": "Course",
+        "TargetClass": "Course",
+        "Text": "AR Content"
+      },
+      {
+        "Name": "Fan",
+        "TargetClass": "Fan",
+        "Text": "抽風機"
+      },
+      {
+        "Name": "Posture",
+        "TargetClass": "Posture",
+        "Text": "Posture"
+      },
+      {
+        "Name": "GasDetector",
+        "TargetClass": "GasDetector",
+        "Text": "氣體偵測器"
+      },
+      {
+        "Name": "PoisonValve",
+        "TargetClass": "PoisonValve",
+        "Text": "臭氣瓶"
+      }
+    ]
+
+  },
+  "CameraUri": [
+    "rtsp://wjcam2:2455taff1756@192.168.2.150:88/videoMain",
+    "rtsp://wjcam4:2455taff1756@192.168.2.152:88/videoMain",
+    "rtsp://:8554/test",
+    "rtsp://:8554/test"
+  ]
+}

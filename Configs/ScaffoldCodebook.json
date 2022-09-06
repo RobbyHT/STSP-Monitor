@@ -1,0 +1,193 @@
+{
+  "HLARootObject": {
+    "Attribute": {
+      "HLAprivilegeToDeleteObject": {
+        "DataType": "NA",
+        "PubSub": "N"
+      }
+    },
+    "PubSub": "N",
+    "SubClass": {
+      "CkptSet": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Course": {
+        "Attribute": {
+          "Status": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "end(0), on_going(2)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Disaster": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "DisasterList": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Score": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "ScoreList": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "TraineeInfo": {
+        "Attribute": {
+          "Language": {
+            "PubSub": "PS",
+            "DataType": "string",
+            "_comment": "Ch:Chinese,  En:English"
+          },
+          "TraineeID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Name": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "CourseID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "TypeID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "TraineePosition": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "uint"
+          },
+          "X": {
+            "PubSub": "PS",
+            "DataType": "float"
+          },
+          "Y": {
+            "PubSub": "PS",
+            "DataType": "float"
+          },
+          "Z": {
+            "PubSub": "PS",
+            "DataType": "float"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "UnitCkpt": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Vibrator": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Ability": {
+            "PubSub": "PS",
+            "DataType": "int"
+          },
+          "Trigger": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "on/off: 1(ON); 0(OFF)"
+          },
+          "Strength": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "weak(1)/medium(2)/strong(3)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Fan": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Trigger": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "on/off: 1(ON); 0(OFF)"
+          },
+          "Strength": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "weak(1)/medium(2)/strong(3)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      }
+    }
+  },
+  "HLARootInteraction": {
+    "SubClass": {
+      "CourseCtrl": {
+        "Parameter": {
+          "Status": {
+            "DataType": "int",
+            "_comment": "terminated(0),paused(1),start(2)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      }
+    },
+    "Parameter": {},
+    "PubSub": "N"
+  }
+}

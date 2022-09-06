@@ -1,0 +1,16 @@
+{
+    "id": "11010050015",
+    "unit_code": "SW_U",
+    "little_unit": [
+      {
+        "code": "SW_U_00",
+        "ScoreData": {
+          "score": 30,
+          "pass": "true",
+          "StartDateTime": "2025-10-30 08:10:00",
+          "EndDateTime": "2026-10-30 00:30:00",
+          "TestTimeLast": "01:30:00"
+        }
+      }
+    ]
+  }                              

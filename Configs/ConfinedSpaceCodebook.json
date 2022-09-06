@@ -1,0 +1,241 @@
+{
+  "HLARootObject": {
+    "Attribute": {
+      "HLAprivilegeToDeleteObject": {
+        "DataType": "NA",
+        "PubSub": "N"
+      }
+    },
+    "PubSub": "N",
+    "SubClass": {
+      "CkptSet": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Course": {
+        "Attribute": {
+          "Status": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "end(0), on_going(2)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Disaster": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "DisasterList": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Score": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "ScoreList": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "TraineeInfo": {
+        "Attribute": {
+          "Language": {
+            "PubSub": "PS",
+            "DataType": "string",
+            "_comment": "Ch:Chinese,  En:English"
+          },
+          "TraineeID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Name": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "CourseID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "TypeID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "TraineePosition": {
+        "Attribute": {
+          "IsAtSewer": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "1(true), 0(false)"
+          },
+          "PiState": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "UnitCkpt": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "PoisonValve": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Trigger": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "on/off: 1(ON); 0(OFF)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "GasDetector": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Gas": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "O2 = 0, H2S = 1, CO = 2, LEL = 3"
+          },
+          "Concentration": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "gas concentration(ppm)"
+          },
+          "Buzzer": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "0(silence), 1(alarming)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Fan": {
+        "Attribute": {
+          "ID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Trigger": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "on/off: 1(ON); 0(OFF)"
+          },
+          "Strength": {
+            "PubSub": "PS",
+            "DataType": "int",
+            "_comment": "weak(1)/medium(2)/strong(3)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Posture": {
+        "Attribute": {
+          "SubjectID": {
+            "PubSub": "PS",
+            "DataType": "string"
+          },
+          "Action": {
+            "PubSub": "PS",
+            "DataType": "string",
+            "_comment": "The posture"
+          },
+          "Probability": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "Item": {
+        "Attribute": {
+          "Data": {
+            "PubSub": "PS",
+            "DataType": "string"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      }
+    }
+  },
+  "HLARootInteraction": {
+    "SubClass": {
+      "CourseCtrl": {
+        "Parameter": {
+          "Status": {
+            "DataType": "int",
+            "_comment": "terminated(0),paused(1),start(2)"
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      },
+      "RelocateSewer": {
+        "Parameter": {
+          "Trigger": {
+            "DataType": "int",
+            "_comment": "relocate sewer position."
+          }
+        },
+        "PubSub": "PS",
+        "SubClass": {}
+      }
+    },
+    "Parameter": {},
+    "PubSub": "N"
+  }
+}

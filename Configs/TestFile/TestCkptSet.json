@@ -1,0 +1,187 @@
+{
+  "data": [
+    {
+      "unit_code": "SW_U",
+      "little_unit": [
+        {
+          "little_unit_code": "SW_U_00",
+          "CheckpointData": [
+            {
+              "CKPT_code": "CKPT_00",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_01",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_02",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_03",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_04",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_05",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_06",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_07",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_08",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_09",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_10",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_11",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_12",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_13",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_14",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_15",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_16",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_17",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_18",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_19",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_20",
+              "PointType": 0
+            }
+          ]
+        },
+        {
+          "little_unit_code": "SW_U_01",
+          "CheckpointData": [
+            {
+              "CKPT_code": "CKPT_00",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_01",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_02",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_03",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_04",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_05",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_06",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_07",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_08",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_09",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_10",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_11",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_12",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_13",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_14",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_15",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_16",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_17",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_18",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_19",
+              "PointType": 0
+            },
+            {
+              "CKPT_code": "CKPT_20",
+              "PointType": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

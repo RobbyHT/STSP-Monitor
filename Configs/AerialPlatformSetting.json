@@ -1,0 +1,179 @@
+{
+  "TrainingArgument": {
+    "_comment": "The training argument of this course.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "高空-剪刀-安全裝備穿戴", "高空-剪刀-作業前檢點", "高空-剪刀-安裝消防灑水噴頭", "高空-車載-安全裝備穿戴", "高空-車載-作業前檢點", "高空-車載-修剪路樹作業" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID",
+        "TargetOptions": [ "HA_S_00", "HA_S_01", "HA_S_02", "HA_C_00", "HA_C_01", "HA_C_02" ]
+      },
+      {
+        "Name": "Mode",
+        "ControlType": "ComboBox",
+        "OptionTexts": [ "體驗版", "測驗版", "教育版" ],
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "TypeID",
+        "TargetOptions": [ "Experience", "Examination", "Education" ]
+      }
+    ]
+  },
+  "HardwareInfo": {
+    "_comment": "The hardware information that is going to display during the cource.",
+    "Configs": [
+      {
+        "Name": "Unit",
+        "ControlType": "Label",
+        "Text": "目前的課程為:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "TraineeInfo",
+        "TargetArgument": "CourseID"
+      },
+      {
+        "Name": "Trainee1",
+        "ControlType": "Label",
+        "Text": "受訓員ID:{0}",
+        "Destination": "XR",
+        "TargetType": "Object",
+        "TargetClass": "UserData",
+        "TargetArgument": "ID",
+        "Index": 0
+      },
+      {
+        "Name": "CarHandleInfoForward",
+        "ControlType": "Label",
+        "Text": "高空作業車Forward值:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "CarHandleInfo",
+        "TargetArgument": "Forward"
+      },
+      {
+        "Name": "CarHandleInfoRight",
+        "ControlType": "Label",
+        "Text": "高空作業車Right值:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "CarHandleInfo",
+        "TargetArgument": "Right"
+      },
+      {
+        "Name": "Vibrator",
+        "ControlType": "Label",
+        "Text": "震動地板:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Vibrator",
+        "TargetArgument": "Trigger"
+      },
+      {
+        "Name": "Fan",
+        "ControlType": "Label",
+        "Text": "電風扇:{0}",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Fan",
+        "TargetArgument": "Trigger"
+      }
+    ]
+
+  },
+  "Manipulation": {
+    "_comment": "The manipulable devices during the course.",
+    "Configs": [
+      {
+        "Name": "VibratorOn",
+        "ControlType": "Button",
+        "Text": "開啟震動",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Vibrator",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "1" ]
+      },
+      {
+        "Name": "VibratorOff",
+        "ControlType": "Button",
+        "Text": "關閉震動",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Vibrator",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "0" ]
+      },{
+        "Name": "FanOn",
+        "ControlType": "Button",
+        "Text": "開啟Fan",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Fan",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "1" ]
+      },
+      {
+        "Name": "FanOff",
+        "ControlType": "Button",
+        "Text": "關閉Fan",
+        "Destination": "Federate",
+        "TargetType": "Object",
+        "TargetClass": "Fan",
+        "TargetArguments": [ "Trigger" ],
+        "TargetValues": [ "0" ]
+      }
+    ]
+  },
+  "ConnectingDevice": {
+    "_comment": "The devices that is going to connect to this program.(used for connection check)",
+    "Configs": [
+      {
+        "Name": "Course",
+        "TargetClass": "Course",
+        "Text": "AR Content"
+      },
+      {
+        "Name": "Vibrator",
+        "TargetClass": "Vibrator",
+        "Text": "震動地板"
+      },
+      {
+        "Name": "Car",
+        "TargetClass": "CarHandleInfo",
+        "Text": "高空作業車"
+      },
+      {
+        "Name": "Fan",
+        "TargetClass": "Fan",
+        "Text": "風扇"
+      }
+
+    ]
+
+  },
+  "CameraUri": [
+    "rtsp://:8554/test",
+    "rtsp://:8554/test",
+    "rtsp://:8554/test",
+    "rtsp://:8554/test"
+  ],
+  "Listener": 
+  [
+    {
+      "ActionName": "PlayMusic",
+      "Destination": "Federate",
+      "TargetClass": "Vibrator",
+      "TargetArgument": "Trigger",
+      "Index": 0,
+      "Arguments": {
+        "URL": "..\\..\\..\\Configs\\ding.mp3"
+      }
+    }
+  ]
+  
+}
